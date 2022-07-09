@@ -1,5 +1,13 @@
 <template>
+<div id="app">
+  <router-link to='/home'>ref</router-link> |
+  <router-link to='/login'>reactive</router-link> |
+  <router-link to='/to'>to</router-link>
+  <br>
+  <br>
+  <br>
   <router-view />
+</div>
 </template>
 
 <style lang="scss" scoped>
@@ -7,9 +15,9 @@
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* text-align: center; */
-  /* color: #2c3e50; */
-  /* margin-top: 60px; */
+  text-align: center; 
+  color: #2c3e50; 
+  margin-top: 60px; 
 }
 
 </style>

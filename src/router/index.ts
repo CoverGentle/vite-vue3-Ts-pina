@@ -3,22 +3,35 @@ import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 
 const routes:Array<RouteRecordRaw>=[
   {
+    path:'/',
+    redirect:'/home'
+  },
+  {
     path: '/login',
     name: 'LoginPage',
     meta: {
         title: '登录',
         // keepAlive: true,
     },
-    component: () => import('../views/login/login.vue')
+    component: () => import('../views/dome/login.vue')
   },
   {
-    path: '/',
+    path: '/home',
     name: 'homePage',
     meta: {
         title: '首页',
         // keepAlive: true,
     },
-    component: () => import('../views/home/home.vue')
+    component: () => import('../views/dome/home.vue')
+  },
+  {
+    path: '/to',
+    name: 'toPage',
+    meta: {
+        title: 'to系列全家桶',
+        // keepAlive: true,
+    },
+    component: () => import('../views/dome/to.vue')
   },
 ]
 const router = createRouter({
