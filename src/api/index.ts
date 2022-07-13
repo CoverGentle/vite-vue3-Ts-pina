@@ -4,7 +4,10 @@ export const getInfo = ()=>{
   return request(
     {
       url: '/api/list',
-      method: 'get'
+      method: 'get',
+      params:{
+        t:Date.now()
+      }
     }
   )
 }
