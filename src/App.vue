@@ -2,7 +2,8 @@
 <div id="app">
   <router-link to='/home'>ref</router-link> |
   <router-link to='/login'>reactive</router-link> |
-  <router-link to='/to'>to</router-link>
+  <router-link to='/to'>to</router-link> |
+  <router-link to='/dome'>dome</router-link>
   <br>
   <br>
   <br>
