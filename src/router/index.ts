@@ -42,6 +42,15 @@ const routes:Array<RouteRecordRaw>=[
     },
     component: () => import('../views/dome/dome.vue')
   },
+  {
+    path: '/test',
+    name: 'testPage',
+    meta: {
+        title: 'test',
+        // keepAlive: true,
+    },
+    component: () => import('../views/dome/test.vue')
+  },
 ]
 const router = createRouter({
   history: createWebHistory(),
