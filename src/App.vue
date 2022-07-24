@@ -4,7 +4,8 @@
   <router-link to='/login'>reactive</router-link> |
   <router-link to='/to'>to</router-link> |
   <router-link to='/dome'>dome</router-link> |
-  <router-link to='/test'>test</router-link>
+  <router-link to='/test'>test</router-link> |
+  <router-link to='/father'>father</router-link>
   <br>
   <br>
   <br>

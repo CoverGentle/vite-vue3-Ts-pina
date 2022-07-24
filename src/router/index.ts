@@ -51,6 +51,15 @@ const routes:Array<RouteRecordRaw>=[
     },
     component: () => import('../views/dome/test.vue')
   },
+  {
+    path: '/father',
+    name: 'fatherPage',
+    meta: {
+        title: '父子组件',
+        // keepAlive: true,
+    },
+    component: () => import('../views/dome/father.vue')
+  },
 ]
 const router = createRouter({
   history: createWebHistory(),
