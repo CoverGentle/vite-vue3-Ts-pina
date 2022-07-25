@@ -12,10 +12,13 @@ export default defineConfig({
       port: 1228
     },
     // 设置代理
-    // proxy:{
-    //   '/api':{
-    //     target:'http://localhost:3333/',  //需要呗代理的后端地址
-    //     changeOrigin:true
+    // proxy: {
+    //   '/api': {
+    //       target: url,
+    //       changeOrigin: true,
+    //       pathRewrite: {
+    //           '^/api': ''
+    //       }
     //   }
     // }
   }

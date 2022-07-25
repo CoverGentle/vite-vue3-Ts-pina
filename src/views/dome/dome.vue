@@ -4,12 +4,18 @@
     <p>-----------</p>
     <p>{{man.name}}</p>
     <button @click="HandleClick">botton</button>
-
+    <br>
+    <br>
+    <br>
+    <!-- 使用v-model用来父子组件之间传值 -->
+    <dome-child-vue v-model:num="num"></dome-child-vue>
   </div>
 </template>
 
 <script setup lang="ts">
 import {onUpdated,onBeforeMount, onBeforeUpdate, onMounted,onBeforeUnmount,onUnmounted,ref,Ref,reactive } from 'vue'
+import domeChildVue from './children/domeChild.vue';
+  let num = ref(40)
   const str:Ref<string> = ref('小明')
   let divStr = ref()
   interface Person{

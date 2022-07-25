@@ -60,6 +60,15 @@ const routes:Array<RouteRecordRaw>=[
     },
     component: () => import('../views/dome/father.vue')
   },
+  {
+    path: '/slot',
+    name: 'slotPage',
+    meta: {
+        title: '插槽',
+        // keepAlive: true,
+    },
+    component: () => import('../views/dome/slotModule.vue')
+  },
 ]
 const router = createRouter({
   history: createWebHistory(),

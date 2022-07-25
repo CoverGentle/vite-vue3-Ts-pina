@@ -5,7 +5,8 @@
   <router-link to='/to'>to</router-link> |
   <router-link to='/dome'>dome</router-link> |
   <router-link to='/test'>test</router-link> |
-  <router-link to='/father'>father</router-link>
+  <router-link to='/father'>father</router-link> |
+  <router-link to='/slot'>slot插槽</router-link> |
   <br>
   <br>
   <br>
