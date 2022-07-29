@@ -1,8 +1,9 @@
 <template>
+<!-- v-model 全选全不选操作作业 -->
   <h5>全选/全不选</h5>
+  <slot></slot>
   <div>
-      <input type="checkbox" v-model="checkAll" /> 全选/全不选
-
+      <input type="checkbox" v-model="checkAll" />全选/全不选
       <ul>
         <li v-for="item,index in list" :key="index">
           <input type="checkbox" v-model="checked[index]"> {{item}}
@@ -15,11 +16,19 @@
 import { computed } from '@vue/reactivity';
 import { reactive, toRefs } from 'vue';
 
-let listCheckBox = reactive({
+let listCheckBox = reactive<DataType>({
   list:[20,30,40,50],
-  checked:[false,false,false,false]
+  checked:[]
 })
+listCheckBox.checked = listCheckBox.list.map(()=>false)
 let {list,checked} = toRefs(listCheckBox)
+for (let key in listCheckBox.checked) {
+  if (Object.prototype.hasOwnProperty.call(listCheckBox.checked, key)) {
+    const element = listCheckBox.checked[key];
+    console.log(element);
+    
+  }
+}
 
 let checkAll = computed({
   get(){
@@ -32,8 +41,6 @@ let checkAll = computed({
     console.log(listCheckBox.checked.map(()=>newVal));
     // 把checked所有值都变成newVal
     listCheckBox.checked = listCheckBox.checked.map(()=>newVal)
-    
-    
     console.log(listCheckBox.checked);
   }
 })

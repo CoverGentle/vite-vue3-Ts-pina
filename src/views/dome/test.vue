@@ -42,6 +42,10 @@ import { computed, reactive, toRefs, watch, watchEffect } from 'vue';
     console.log(num.value,'watchEffect');
     
   })
+  console.log(globalVar);
+  console.log(globalObj);
+  
+  
 </script>
 
 <style lang='less' scoped>

@@ -7,6 +7,7 @@
   <router-link to='/test'>test</router-link> |
   <router-link to='/father'>father</router-link> |
   <router-link to='/slot'>slot插槽</router-link> |
+  <router-link to='/calendar'>日历</router-link>
   <br>
   <br>
   <br>

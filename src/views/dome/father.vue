@@ -2,7 +2,9 @@
   <div>
     <p>这是父组件</p>
     <example-vue :num="num" @fn="changeNum"></example-vue>
-    <task1-vue></task1-vue>
+    <task1-vue>
+      <p>这是一份学习dome</p>
+    </task1-vue>
   </div>
 </template>
 

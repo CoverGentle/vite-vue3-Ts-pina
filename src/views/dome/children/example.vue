@@ -2,7 +2,8 @@
   <div>
     <p>这是子组件</p>
     <p>{{num}}</p>
-    <button @click="handleClick">按钮</button>
+    <!-- <button >按钮</button> -->
+    <van-button type="primary" @click="handleClick">主要按钮</van-button>
   </div>
 </template>
 

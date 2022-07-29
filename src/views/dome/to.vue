@@ -21,10 +21,6 @@ import {CovidData } from '../../modal/index'
     const {areaTree} = diseaseh5Shelf
     areaTreeInfo.push(areaTree[0].children)
     console.log(areaTreeInfo);
-    
-    
-    
-
     // const{ areaTree } = res.data.diseaseh5Shelf
     // data.world.areaTree = JSON.parse(JSON.stringify(areaTree[0]))
     // const {children} = areaTree[0]

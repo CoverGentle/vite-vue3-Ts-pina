@@ -68,7 +68,17 @@ const routes:Array<RouteRecordRaw>=[
         // keepAlive: true,
     },
     component: () => import('../views/dome/slotModule.vue')
+  },{
+    path: '/calendar',
+    name: 'calendarPage',
+    meta: {
+        title: '日历',
+        // keepAlive: true,
+    },
+    component: () => import('../views/main/test1.vue')
   },
+  
+  
 ]
 const router = createRouter({
   history: createWebHistory(),

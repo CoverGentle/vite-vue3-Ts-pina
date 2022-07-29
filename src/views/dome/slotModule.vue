@@ -18,16 +18,16 @@
       </template>
     </slot-child-vue>
     <slot-child-vue :arrList="list.arr">
-      <template #btns>
-        <button>编辑</button>
-        <button>删除</button>
+      <template #btns="scope">
+        <button @click="handleChange(scope.index)">编辑</button>
+        <button @click="handleDelete(scope.index)">删除</button>
       </template>
     </slot-child-vue>
   </div>
 </template>
 
 <script setup lang='ts'>
-import slotChildVue from './children/slotChild.vue';
+// import slotChildVue from './children/slotChild.vue';
 import { reactive, ref } from 'vue';
 let list = reactive({
   arr:[{
@@ -36,12 +36,34 @@ let list = reactive({
   },{
     name:'小红',
     age:12
+  },{
+    name:'小白',
+    age:14
+  },{
+    name:'小蓝',
+    age:15
+  },{
+    name:'小绿',
+    age:16
   }]
 })
 const handleClick = (index:number) =>{
   console.log("点击编辑",index);
   console.log(list.arr[index]);
 }
+
+const handleChange= (index:number) =>{
+  console.log("点击chenge",index);
+  console.log(list.arr[index].name);
+  // person = list.arr[index].value
+}
+
+const handleDelete = (index:number) =>{
+  console.log("删除",index);
+  list.arr.splice(index,1)
+}
+
+
 </script>
 
 <style lang='less' scoped> 
